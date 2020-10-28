@@ -19,25 +19,37 @@ namespace gsb
 
         private void frmMedicament_Load(object sender, EventArgs e)
         {
-            // On utilise la passerelle pour récupérer le médicament "AMOX45"
-            Medicament med = Passerelle.GetMedicament("AMOX45");
-            // On affiche ce médicament
-            MessageBox.Show(med.ToString());
+            // On utilise la passerelle pour récupérer tous les médicaments
+            List<Medicament> lesMedicaments = Manager.GetChargerMedicaments();
+            // parcours de la liste
+            foreach (Medicament med in lesMedicaments)
+            {
+                // on ajoute chaque médicament aux Items de la liste listMedicaments
+                this.listMedicaments.Items.Add(med.ToString());
+            }
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void listMedicaments_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            // récupération de l'indice du médicament sélectionné
+            int indexMed = this.listMedicaments.SelectedIndex;
+            // récupération du médicament dans la classe manager
+            Medicament med = Manager.GetMedicament(indexMed);
+            // mise à jour des champs de texte
+            this.txtId.Text = med.GetId();
+            this.txtNomCommercial.Text = med.GetNomCommercial();
+            this.txtEffets.Text = med.GetEffets();
+            this.txtComposition.Text = med.GetComposition();
+            this.txtContreIndications.Text = med.GetContreIndications();
+            // récupération de la famille du médicament grâce au Manager
+            Famille famille = Manager.GetFamilleDuMedicament(med);
+            // mise à jour du champ de texte txtFamille avec le libellé de la famille
+            this.txtFamille.Text = famille.GetLibelle();
         }
     }
 }

@@ -59,5 +59,41 @@ namespace gsb
             pictureBox1.Visible = val; // la propriété Visible passe à Vrai ou Faux
             btQuitter.Visible = val;
         }
+
+        private void listeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FermerMDI(); 
+            RendVisible(false);
+            frmMedecin f = new frmMedecin(); 
+            f.MdiParent = this; 
+            f.Show(); 
+        }
+
+        private void gérerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FermerMDI();
+            RendVisible(false);
+            frmNouveauMedicament f = new frmNouveauMedicament();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void gérerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FermerMDI();
+            RendVisible(false);
+            frmNouveauMedecin f = new frmNouveauMedecin();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void rechercherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FermerMDI();
+            RendVisible(false);
+            frmRapport r = new frmRapport();
+            r.MdiParent = this;
+            r.Show();
+        }
     }
 }

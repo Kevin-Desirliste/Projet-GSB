@@ -16,16 +16,6 @@ namespace gsb
         private Famille famille;
 
         public Medicament(String id, String nomCommercial, String composition, String effets,
-          String contreIndications)
-        {
-            this.id = id;
-            this.nomCommercial = nomCommercial;
-            this.composition = composition;
-            this.effets = effets;
-            this.contreIndications = contreIndications;
-        }
-
-        public Medicament(String id, String nomCommercial, String composition, String effets,
           String contreIndications, Famille famille)
         {
             this.id = id;
@@ -34,6 +24,16 @@ namespace gsb
             this.effets = effets;
             this.contreIndications = contreIndications;
             this.famille = famille;
+        }
+
+        public Medicament(String id, String nomCommercial, String composition, String effets,
+         String contreIndications)
+        {
+            this.id = id;
+            this.nomCommercial = nomCommercial;
+            this.composition = composition;
+            this.effets = effets;
+            this.contreIndications = contreIndications;
         }
 
         public String GetId()
