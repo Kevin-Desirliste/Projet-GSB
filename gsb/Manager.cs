@@ -60,6 +60,14 @@ namespace gsb
             return Passerelle.GetIdsRapportsVisiteur(visiteur.GetId());
         }
 
+        public static List<Int32> ChercherIdsRapportsMedecin(int indexMedecin)
+        {
+            // récupère le visiteur dans la liste médecins (qui a été chargée au préalable)
+            Medecin medecin = medecins[indexMedecin];
+            // obtient les ids des rapports des médecins grâce à la Passerelle
+            return Passerelle.GetIdsRapportsMedecin(medecin.GetId());
+        }
+
         // permet d'obtenir une famille de la liste des familles à partir de son index
         public static Medicament GetMedicament(int index)
         {

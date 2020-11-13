@@ -134,6 +134,22 @@ namespace gsb
             return liste;
         }
 
+        public static List<Int32> GetIdsRapportsMedecin(String idMedecin)
+        {
+            List<Int32> liste = new List<Int32>(); // la liste des ids
+            DbCommand dbc = GetConnexion().CreateCommand();
+            dbc.CommandText = "SELECT id FROM rapport "
+            + " WHERE idMedecin='" + idMedecin + "' ORDER BY date DESC";
+            DbDataReader reader = dbc.ExecuteReader();
+            while (reader.Read())
+            {
+                int id = (int)reader["id"];
+                liste.Add(id);
+            }
+            reader.Close();
+            return liste;
+        }
+
         /// Crée un médicament à partir d'une ligne de résultat du jeu d'enregistrements
         private static Medicament MapperLigneMedicament(DbDataReader reader)
         {

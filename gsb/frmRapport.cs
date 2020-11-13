@@ -39,7 +39,25 @@ namespace gsb
             int indexVisiteur = this.cbVisiteurs.SelectedIndex;
 
             // on va rechercher les rapports grâce au manager
-            List<Int32> idsDesRapports = Manager.ChercherIdsRapportsVisiteur(indexVisiteur);// A COMPLETER
+            List<Int32> idsDesRapports = Manager.ChercherIdsRapportsVisiteur(indexVisiteur);
+            // on efface les éléments de la liste listRapports
+            this.listRapports.Items.Clear();
+
+            // on affiche ces ids de rapports dans la liste listRapports
+            foreach (int idRapport in idsDesRapports)
+            {
+                // on ajoute l’idRapport aux Items de la liste listRapports :
+                this.listRapports.Items.Add(idRapport);
+            }
+        }
+
+        private void btRechercher2_Click(object sender, EventArgs e)
+        {
+            // récupération du médecin sélectionné
+            int indexMedecin = this.cbMedecins.SelectedIndex;
+
+            // on va rechercher les rapports grâce au manager
+            List<Int32> idsDesRapports = Manager.ChercherIdsRapportsMedecin(indexMedecin);
             // on efface les éléments de la liste listRapports
             this.listRapports.Items.Clear();
 

@@ -111,6 +111,7 @@
             this.btRechercher2.TabIndex = 33;
             this.btRechercher2.Text = "Rechercher";
             this.btRechercher2.UseVisualStyleBackColor = false;
+            this.btRechercher2.Click += new System.EventHandler(this.btRechercher2_Click);
             // 
             // listRapports
             // 
