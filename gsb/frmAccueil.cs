@@ -17,11 +17,6 @@ namespace gsb
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btQuitter_MouseClick(object sender, MouseEventArgs e)
         {
             Close();
@@ -30,11 +25,6 @@ namespace gsb
         private void btQuitter_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
         
         private void listeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +84,24 @@ namespace gsb
             frmRapport r = new frmRapport();
             r.MdiParent = this;
             r.Show();
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FermerMDI();
+            RendVisible(false);
+            frmNouveauRapport r = new frmNouveauRapport();
+            r.MdiParent = this;
+            r.Show();
+        }
+
+        private void statistiqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FermerMDI();
+            RendVisible(false);
+            frmStatistique s = new frmStatistique();
+            s.MdiParent = this;
+            s.Show();
         }
     }
 }

@@ -43,8 +43,6 @@ namespace gsb
             this.txtTel.Text = med.GetTel();
             this.txtSpecialite.Text = Manager.ChargerSpecialiteDuMedecin(med).GetSpecialite();
             this.txtDepartement.Text = med.GetDepartement().ToString();
-
-
         }
     }
 }

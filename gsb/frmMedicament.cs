@@ -28,12 +28,7 @@ namespace gsb
                 this.listMedicaments.Items.Add(med.ToString());
             }
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void listMedicaments_SelectedIndexChanged(object sender, EventArgs e)
         {
             // récupération de l'indice du médicament sélectionné
@@ -47,7 +42,7 @@ namespace gsb
             this.txtComposition.Text = med.GetComposition();
             this.txtContreIndications.Text = med.GetContreIndications();
             // récupération de la famille du médicament grâce au Manager
-            Famille famille = Manager.GetFamilleDuMedicament(med);
+            Famille famille = Manager.ChargerFamilleDuMedicament(med);
             // mise à jour du champ de texte txtFamille avec le libellé de la famille
             this.txtFamille.Text = famille.GetLibelle();
         }

@@ -34,7 +34,7 @@ namespace gsb
             // récupération des valeurs des champs de texte et instanciation d'un médecin
             Medecin nouveauMed = new Medecin("", txtNom.Text, txtPrenom.Text,
             txtAdresse.Text, txtTel.Text, Int32.Parse(txtDepartement.Text));
-            // récupération de l'index sélectionné dans la liste des familles
+            // récupération de l'index sélectionné dans la liste des spécialitées
             int indexSpecialite = cbSpecialite.SelectedIndex;
             // récupération de la spécialité grâce au manager
             Specialite laSpecialite = Manager.GetSpecialite(indexSpecialite);

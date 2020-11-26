@@ -69,6 +69,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(146, 363);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(176, 22);
             this.txtId.TabIndex = 2;
             // 
@@ -76,6 +77,7 @@
             // 
             this.txtSpecialite.Location = new System.Drawing.Point(561, 361);
             this.txtSpecialite.Name = "txtSpecialite";
+            this.txtSpecialite.ReadOnly = true;
             this.txtSpecialite.Size = new System.Drawing.Size(171, 22);
             this.txtSpecialite.TabIndex = 3;
             // 
@@ -83,6 +85,7 @@
             // 
             this.txtTel.Location = new System.Drawing.Point(146, 728);
             this.txtTel.Name = "txtTel";
+            this.txtTel.ReadOnly = true;
             this.txtTel.Size = new System.Drawing.Size(176, 22);
             this.txtTel.TabIndex = 4;
             // 
@@ -90,6 +93,7 @@
             // 
             this.txtAdresse.Location = new System.Drawing.Point(146, 639);
             this.txtAdresse.Name = "txtAdresse";
+            this.txtAdresse.ReadOnly = true;
             this.txtAdresse.Size = new System.Drawing.Size(176, 22);
             this.txtAdresse.TabIndex = 5;
             // 
@@ -97,6 +101,7 @@
             // 
             this.txtPrenom.Location = new System.Drawing.Point(146, 551);
             this.txtPrenom.Name = "txtPrenom";
+            this.txtPrenom.ReadOnly = true;
             this.txtPrenom.Size = new System.Drawing.Size(176, 22);
             this.txtPrenom.TabIndex = 6;
             // 
@@ -104,6 +109,7 @@
             // 
             this.txtNom.Location = new System.Drawing.Point(146, 462);
             this.txtNom.Name = "txtNom";
+            this.txtNom.ReadOnly = true;
             this.txtNom.Size = new System.Drawing.Size(176, 22);
             this.txtNom.TabIndex = 7;
             // 
@@ -111,6 +117,7 @@
             // 
             this.txtDepartement.Location = new System.Drawing.Point(561, 462);
             this.txtDepartement.Name = "txtDepartement";
+            this.txtDepartement.ReadOnly = true;
             this.txtDepartement.Size = new System.Drawing.Size(171, 22);
             this.txtDepartement.TabIndex = 8;
             // 

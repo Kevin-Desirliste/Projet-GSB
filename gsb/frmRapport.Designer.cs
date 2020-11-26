@@ -32,8 +32,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbMedecins = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btRechercher1 = new System.Windows.Forms.Button();
-            this.btRechercher2 = new System.Windows.Forms.Button();
+            this.btRechercherV = new System.Windows.Forms.Button();
+            this.btRechercherM = new System.Windows.Forms.Button();
             this.listRapports = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lvMedicaments = new System.Windows.Forms.ListView();
+            this.colMedicament = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colQuantite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // cbVisiteurs
@@ -91,27 +93,27 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Médecin";
             // 
-            // btRechercher1
+            // btRechercherV
             // 
-            this.btRechercher1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btRechercher1.Location = new System.Drawing.Point(502, 22);
-            this.btRechercher1.Name = "btRechercher1";
-            this.btRechercher1.Size = new System.Drawing.Size(135, 35);
-            this.btRechercher1.TabIndex = 32;
-            this.btRechercher1.Text = "Rechercher";
-            this.btRechercher1.UseVisualStyleBackColor = false;
-            this.btRechercher1.Click += new System.EventHandler(this.btRechercher1_Click);
+            this.btRechercherV.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btRechercherV.Location = new System.Drawing.Point(502, 22);
+            this.btRechercherV.Name = "btRechercherV";
+            this.btRechercherV.Size = new System.Drawing.Size(135, 35);
+            this.btRechercherV.TabIndex = 32;
+            this.btRechercherV.Text = "Rechercher";
+            this.btRechercherV.UseVisualStyleBackColor = false;
+            this.btRechercherV.Click += new System.EventHandler(this.btRechercherV_Click);
             // 
-            // btRechercher2
+            // btRechercherM
             // 
-            this.btRechercher2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btRechercher2.Location = new System.Drawing.Point(502, 88);
-            this.btRechercher2.Name = "btRechercher2";
-            this.btRechercher2.Size = new System.Drawing.Size(135, 35);
-            this.btRechercher2.TabIndex = 33;
-            this.btRechercher2.Text = "Rechercher";
-            this.btRechercher2.UseVisualStyleBackColor = false;
-            this.btRechercher2.Click += new System.EventHandler(this.btRechercher2_Click);
+            this.btRechercherM.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btRechercherM.Location = new System.Drawing.Point(502, 88);
+            this.btRechercherM.Name = "btRechercherM";
+            this.btRechercherM.Size = new System.Drawing.Size(135, 35);
+            this.btRechercherM.TabIndex = 33;
+            this.btRechercherM.Text = "Rechercher";
+            this.btRechercherM.UseVisualStyleBackColor = false;
+            this.btRechercherM.Click += new System.EventHandler(this.btRechercherM_Click);
             // 
             // listRapports
             // 
@@ -121,6 +123,7 @@
             this.listRapports.Name = "listRapports";
             this.listRapports.Size = new System.Drawing.Size(251, 84);
             this.listRapports.TabIndex = 34;
+            this.listRapports.SelectedIndexChanged += new System.EventHandler(this.listRapports_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -136,9 +139,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(33, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 36;
-            this.label3.Text = "Médecin";
+            this.label3.Text = "Visiteur";
             // 
             // label4
             // 
@@ -198,6 +201,7 @@
             // 
             this.txtNomVisiteur.Location = new System.Drawing.Point(194, 310);
             this.txtNomVisiteur.Name = "txtNomVisiteur";
+            this.txtNomVisiteur.ReadOnly = true;
             this.txtNomVisiteur.Size = new System.Drawing.Size(131, 22);
             this.txtNomVisiteur.TabIndex = 43;
             // 
@@ -205,6 +209,7 @@
             // 
             this.txtPrenomVisiteur.Location = new System.Drawing.Point(194, 350);
             this.txtPrenomVisiteur.Name = "txtPrenomVisiteur";
+            this.txtPrenomVisiteur.ReadOnly = true;
             this.txtPrenomVisiteur.Size = new System.Drawing.Size(131, 22);
             this.txtPrenomVisiteur.TabIndex = 44;
             // 
@@ -212,6 +217,7 @@
             // 
             this.txtMotif.Location = new System.Drawing.Point(194, 389);
             this.txtMotif.Name = "txtMotif";
+            this.txtMotif.ReadOnly = true;
             this.txtMotif.Size = new System.Drawing.Size(131, 22);
             this.txtMotif.TabIndex = 45;
             // 
@@ -219,6 +225,7 @@
             // 
             this.txtDate.Location = new System.Drawing.Point(194, 431);
             this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
             this.txtDate.Size = new System.Drawing.Size(131, 22);
             this.txtDate.TabIndex = 46;
             // 
@@ -226,6 +233,7 @@
             // 
             this.txtBilan.Location = new System.Drawing.Point(194, 472);
             this.txtBilan.Name = "txtBilan";
+            this.txtBilan.ReadOnly = true;
             this.txtBilan.Size = new System.Drawing.Size(131, 22);
             this.txtBilan.TabIndex = 47;
             // 
@@ -233,6 +241,7 @@
             // 
             this.txtAdresseMedecin.Location = new System.Drawing.Point(518, 389);
             this.txtAdresseMedecin.Name = "txtAdresseMedecin";
+            this.txtAdresseMedecin.ReadOnly = true;
             this.txtAdresseMedecin.Size = new System.Drawing.Size(131, 22);
             this.txtAdresseMedecin.TabIndex = 53;
             // 
@@ -240,6 +249,7 @@
             // 
             this.txtPrenomMedecin.Location = new System.Drawing.Point(518, 350);
             this.txtPrenomMedecin.Name = "txtPrenomMedecin";
+            this.txtPrenomMedecin.ReadOnly = true;
             this.txtPrenomMedecin.Size = new System.Drawing.Size(131, 22);
             this.txtPrenomMedecin.TabIndex = 52;
             // 
@@ -247,6 +257,7 @@
             // 
             this.txtNomMedecin.Location = new System.Drawing.Point(518, 310);
             this.txtNomMedecin.Name = "txtNomMedecin";
+            this.txtNomMedecin.ReadOnly = true;
             this.txtNomMedecin.Size = new System.Drawing.Size(131, 22);
             this.txtNomMedecin.TabIndex = 51;
             // 
@@ -279,12 +290,27 @@
             // 
             // lvMedicaments
             // 
+            this.lvMedicaments.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colMedicament,
+            this.colQuantite});
             this.lvMedicaments.HideSelection = false;
             this.lvMedicaments.Location = new System.Drawing.Point(36, 511);
             this.lvMedicaments.Name = "lvMedicaments";
+            this.lvMedicaments.Scrollable = false;
             this.lvMedicaments.Size = new System.Drawing.Size(632, 216);
             this.lvMedicaments.TabIndex = 54;
             this.lvMedicaments.UseCompatibleStateImageBehavior = false;
+            this.lvMedicaments.View = System.Windows.Forms.View.Details;
+            // 
+            // colMedicament
+            // 
+            this.colMedicament.Text = "Médicaments offerts";
+            this.colMedicament.Width = 400;
+            // 
+            // colQuantite
+            // 
+            this.colQuantite.Text = "Quantité";
+            this.colQuantite.Width = 225;
             // 
             // frmRapport
             // 
@@ -312,8 +338,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listRapports);
-            this.Controls.Add(this.btRechercher2);
-            this.Controls.Add(this.btRechercher1);
+            this.Controls.Add(this.btRechercherM);
+            this.Controls.Add(this.btRechercherV);
             this.Controls.Add(this.cbMedecins);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbVisiteurs);
@@ -332,8 +358,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbMedecins;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btRechercher1;
-        private System.Windows.Forms.Button btRechercher2;
+        private System.Windows.Forms.Button btRechercherV;
+        private System.Windows.Forms.Button btRechercherM;
         private System.Windows.Forms.ListBox listRapports;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -355,5 +381,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListView lvMedicaments;
+        private System.Windows.Forms.ColumnHeader colMedicament;
+        private System.Windows.Forms.ColumnHeader colQuantite;
     }
 }

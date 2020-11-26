@@ -97,6 +97,7 @@
             this.txtFamille.Location = new System.Drawing.Point(586, 593);
             this.txtFamille.Multiline = true;
             this.txtFamille.Name = "txtFamille";
+            this.txtFamille.ReadOnly = true;
             this.txtFamille.Size = new System.Drawing.Size(166, 87);
             this.txtFamille.TabIndex = 12;
             // 
@@ -105,6 +106,7 @@
             this.txtContreIndications.Location = new System.Drawing.Point(586, 475);
             this.txtContreIndications.Multiline = true;
             this.txtContreIndications.Name = "txtContreIndications";
+            this.txtContreIndications.ReadOnly = true;
             this.txtContreIndications.Size = new System.Drawing.Size(166, 87);
             this.txtContreIndications.TabIndex = 11;
             // 
@@ -113,6 +115,7 @@
             this.txtEffets.Location = new System.Drawing.Point(586, 356);
             this.txtEffets.Multiline = true;
             this.txtEffets.Name = "txtEffets";
+            this.txtEffets.ReadOnly = true;
             this.txtEffets.Size = new System.Drawing.Size(166, 90);
             this.txtEffets.TabIndex = 10;
             // 
@@ -121,6 +124,7 @@
             this.txtComposition.Location = new System.Drawing.Point(191, 593);
             this.txtComposition.Multiline = true;
             this.txtComposition.Name = "txtComposition";
+            this.txtComposition.ReadOnly = true;
             this.txtComposition.Size = new System.Drawing.Size(187, 87);
             this.txtComposition.TabIndex = 9;
             // 
@@ -128,6 +132,7 @@
             // 
             this.txtNomCommercial.Location = new System.Drawing.Point(191, 475);
             this.txtNomCommercial.Name = "txtNomCommercial";
+            this.txtNomCommercial.ReadOnly = true;
             this.txtNomCommercial.Size = new System.Drawing.Size(187, 22);
             this.txtNomCommercial.TabIndex = 8;
             // 
@@ -135,6 +140,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(191, 359);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(187, 22);
             this.txtId.TabIndex = 7;
             // 
@@ -173,7 +179,6 @@
             this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "composition";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
