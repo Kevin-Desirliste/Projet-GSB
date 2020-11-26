@@ -23,7 +23,7 @@ namespace gsb
                DbProviderFactories.GetFactory("MySql.Data.MySqlClient");
                 connexion = dbpf.CreateConnection();
                 // changez éventuellement les valeurs ci-dessous :
-                connexion.ConnectionString = "server=localhost; User Id=root; database=c#";
+                connexion.ConnectionString = "server=localhost; User Id=root; database=csharp";
                 connexion.Open();
                 return connexion;
             }
